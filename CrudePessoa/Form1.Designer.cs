@@ -43,6 +43,8 @@ namespace CrudePessoa
             this.btnLimpar = new System.Windows.Forms.Button();
             this.btnSalvar = new System.Windows.Forms.Button();
             this.dgPessoas = new System.Windows.Forms.DataGridView();
+            this.txtId = new System.Windows.Forms.TextBox();
+            this.lbId = new System.Windows.Forms.Label();
             this.id = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Nome = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.CPF = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -58,7 +60,7 @@ namespace CrudePessoa
             // 
             this.lbNome.AutoSize = true;
             this.lbNome.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbNome.Location = new System.Drawing.Point(89, 56);
+            this.lbNome.Location = new System.Drawing.Point(89, 84);
             this.lbNome.Name = "lbNome";
             this.lbNome.Size = new System.Drawing.Size(67, 24);
             this.lbNome.TabIndex = 0;
@@ -66,7 +68,7 @@ namespace CrudePessoa
             // 
             // txtNome
             // 
-            this.txtNome.Location = new System.Drawing.Point(162, 56);
+            this.txtNome.Location = new System.Drawing.Point(162, 84);
             this.txtNome.Multiline = true;
             this.txtNome.Name = "txtNome";
             this.txtNome.Size = new System.Drawing.Size(214, 25);
@@ -74,7 +76,7 @@ namespace CrudePessoa
             // 
             // txtCpf
             // 
-            this.txtCpf.Location = new System.Drawing.Point(162, 89);
+            this.txtCpf.Location = new System.Drawing.Point(162, 117);
             this.txtCpf.Multiline = true;
             this.txtCpf.Name = "txtCpf";
             this.txtCpf.Size = new System.Drawing.Size(214, 25);
@@ -84,7 +86,7 @@ namespace CrudePessoa
             // 
             this.lbCpf.AutoSize = true;
             this.lbCpf.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbCpf.Location = new System.Drawing.Point(104, 89);
+            this.lbCpf.Location = new System.Drawing.Point(104, 117);
             this.lbCpf.Name = "lbCpf";
             this.lbCpf.Size = new System.Drawing.Size(52, 24);
             this.lbCpf.TabIndex = 3;
@@ -185,11 +187,31 @@ namespace CrudePessoa
             this.Rua,
             this.Editar,
             this.Deletar});
+            this.dgPessoas.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.dgPessoas.Location = new System.Drawing.Point(12, 213);
             this.dgPessoas.Name = "dgPessoas";
             this.dgPessoas.Size = new System.Drawing.Size(778, 225);
             this.dgPessoas.TabIndex = 18;
             this.dgPessoas.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgPessoas_CellContentClick);
+            // 
+            // txtId
+            // 
+            this.txtId.Enabled = false;
+            this.txtId.Location = new System.Drawing.Point(162, 46);
+            this.txtId.Multiline = true;
+            this.txtId.Name = "txtId";
+            this.txtId.Size = new System.Drawing.Size(214, 25);
+            this.txtId.TabIndex = 20;
+            // 
+            // lbId
+            // 
+            this.lbId.AutoSize = true;
+            this.lbId.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbId.Location = new System.Drawing.Point(124, 46);
+            this.lbId.Name = "lbId";
+            this.lbId.Size = new System.Drawing.Size(32, 24);
+            this.lbId.TabIndex = 19;
+            this.lbId.Text = "ID:";
             // 
             // id
             // 
@@ -237,6 +259,8 @@ namespace CrudePessoa
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.txtId);
+            this.Controls.Add(this.lbId);
             this.Controls.Add(this.dgPessoas);
             this.Controls.Add(this.btnSalvar);
             this.Controls.Add(this.btnLimpar);
@@ -276,6 +300,8 @@ namespace CrudePessoa
         private System.Windows.Forms.Button btnLimpar;
         private System.Windows.Forms.Button btnSalvar;
         private System.Windows.Forms.DataGridView dgPessoas;
+        private System.Windows.Forms.TextBox txtId;
+        private System.Windows.Forms.Label lbId;
         private System.Windows.Forms.DataGridViewTextBoxColumn id;
         private System.Windows.Forms.DataGridViewTextBoxColumn Nome;
         private System.Windows.Forms.DataGridViewTextBoxColumn CPF;
